@@ -10,13 +10,9 @@ int print_char(va_list args)
 {
 	int chr = va_arg(args, int);
 	unsigned int len = 0;
-/*	int res;*/
+
 	_putchar(chr);
 
-	/* res = _putchar(chr);
-	*if (res == -1)
-	*	return (-1);
-*/
 	len++;
 	return (len);
 }

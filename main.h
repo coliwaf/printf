@@ -15,7 +15,7 @@
 typedef struct format
 {
 	char *specifier;
-	int(*print)(va_list);
+	int (*print)(va_list);
 } format_t;
 
 /****** Prototypes ******/
