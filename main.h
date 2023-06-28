@@ -27,8 +27,11 @@ int _printf(const char *format, ...);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
+int print_decimal(va_list args);
 
 /** helper_functions **/
+int print_number(unsigned int n);
+int count_length(unsigned int n);
 
 /****** END prototypes *****/
 #endif

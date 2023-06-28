@@ -13,6 +13,8 @@ int (*get_func(const char *definer))(va_list)
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
+		{"d", print_decimal},
+		{"i", print_decimal},
 	};
 
 	for (i = 0; symbols[i].specifier; i++)
