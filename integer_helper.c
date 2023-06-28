@@ -11,9 +11,11 @@ int print_number(unsigned int n)
 	int res;
 
 	if (numb / 10)
-	print_number(numb / 10);
+		print_number(numb / 10);
+
 	res = _putchar('0' + numb % 10);
 	if (res == -1)
+		return (res);
 	return (res);
 }
 /**
@@ -24,9 +26,8 @@ int print_number(unsigned int n)
 int count_length(unsigned int n)
 {
 	unsigned int len;
+
 	for (len = 0; n > len; len++)
-		n = /;10
+		n /= 10;
 	return(len);
 }
-
-

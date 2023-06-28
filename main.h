@@ -28,15 +28,12 @@ int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
 int print_decimal(va_list args);
+int print_binary(va_list args);
 
 /** helper_functions **/
 int print_number(unsigned int n);
 int count_length(unsigned int n);
-int print_binary(va_list args);
-
-/** helper_functions **/
 void get_binary(unsigned int dec);
 
 /****** END prototypes *****/
 #endif
-#Fixed some errors

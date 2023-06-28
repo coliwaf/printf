@@ -21,18 +21,18 @@ int print_decimal(va_list args)
 	
 	if (dec < 0 && dec != 0)
 	{
-	_putchar(-);
-	len += 1;
-	i = -dec;
+		_putchar('-');
+		len += 1;
+		i = -dec;
 	}
-	
 	else
-	i = dec;
+		i = dec;
+
 	res = print_number(i);
+
 	if (res == 1)
-	len += count_length(i);
-	
+		len += count_length(i);	
 	else
-	len = -1;
+		len = -1;
 	return (len);
 }	
