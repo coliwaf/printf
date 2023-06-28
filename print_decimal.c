@@ -18,8 +18,7 @@ int print_decimal(va_list args)
 		_putchar('0');
 		return (1);
 	}
-	
-	if (dec < 0 && dec != 0)
+	else if (dec < 0 )
 	{
 		_putchar('-');
 		len += 1;

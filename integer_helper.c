@@ -25,9 +25,11 @@ int print_number(unsigned int n)
  */
 int count_length(unsigned int n)
 {
-	unsigned int len;
+	int len;
 
-	for (len = 0; n > len; len++)
+	len = 0;
+
+	for (; n > 0; len++)
 		n /= 10;
 	return(len);
 }
