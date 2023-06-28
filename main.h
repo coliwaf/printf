@@ -33,7 +33,8 @@ int print_binary(va_list args);
 /** helper_functions **/
 int print_number(unsigned int n);
 int count_length(unsigned int n);
-void get_binary(unsigned int dec);
+int get_binary_len(unsigned int dec);
+int prnt_binary(unsigned int n);
 
 /****** END prototypes *****/
 #endif

@@ -33,3 +33,22 @@ int count_length(unsigned int n)
 		n /= 10;
 	return(len);
 }
+
+/**
+ * prnt_binary - convert decimal to binary
+ * @n: decimal paameter to print
+ * Return: 1 if successful
+ */
+int prnt_binary(unsigned int n)
+{
+	int result;
+
+	if (n / 2)
+		prnt_binary(n / 2);
+
+	result = _putchar('0' + n % 2);
+	if (result == -1)
+		return (result);
+
+	return (result);
+}

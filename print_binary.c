@@ -9,18 +9,36 @@ int print_binary(va_list args)
 {
 	unsigned int decimal = va_arg(args, unsigned int);
 	int length = 0;
+	int result;
 
-	get_binary(decimal);
+	if (decimal < 1)
+	{
+		_putchar(0 + '0');
+		return (1);
+	}
+
+	result = prnt_binary(decimal);
+
+	if (result == 1)
+		length += get_binary_len(decimal);
+	else
+		length = -1;
+
 	return (length);
 }
 
 /**
- * get_binary - prints binary from decimal
+ * get_binary_len - prints binary from decimal
  * @dec: number param to convert
  */
-void get_binary(unsigned int dec)
+int get_binary_len(unsigned int dec)
 {
-	if (dec > 1)
-		get_binary(dec / 2);
-	_putchar('0' + dec % 2);
+	unsigned int len;
+
+	len = 0;
+
+	for (; dec > 0; len++)
+		dec /= 2;
+	
+	return (len);
 }
