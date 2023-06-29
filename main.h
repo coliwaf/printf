@@ -41,8 +41,8 @@ int get_binary_len(unsigned int dec);
 int prnt_binary(unsigned int n);
 int prnt_octal(unsigned int n);
 int count_octal_length(unsigned int n);
-void prnt_hex_low(unsigned int n, *len);
-void prnt_hex_up(unsigned int n, *len);
+void prnt_hex_low(unsigned int n, int *len);
+void prnt_hex_up(unsigned int n, int *len);
 
 /****** END prototypes *****/
 #endif
