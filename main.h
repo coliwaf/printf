@@ -29,12 +29,20 @@ int print_string(va_list args);
 int print_percent(va_list args);
 int print_decimal(va_list args);
 int print_binary(va_list args);
+int print_unsigned(va_list args);
+int print_octal(va_list args);
+int print_lower_x(va_list args);
+int print_upper_X(va_list args);
 
 /** helper_functions **/
 int print_number(unsigned int n);
 int count_length(unsigned int n);
 int get_binary_len(unsigned int dec);
 int prnt_binary(unsigned int n);
+int prnt_octal(unsigned int n);
+int count_octal_length(unsigned int n);
+void prnt_hex_low(unsigned int n, *len);
+void prnt_hex_up(unsigned int n, *len);
 
 /****** END prototypes *****/
 #endif
