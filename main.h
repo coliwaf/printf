@@ -35,6 +35,7 @@ int print_lower_x(va_list args);
 int print_upper_X(va_list args);
 int print_String(va_list args);
 int print_address(va_list args);
+int print_reverse(va_list args);
 
 /** helper_functions **/
 int print_number(unsigned int n);
