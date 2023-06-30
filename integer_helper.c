@@ -84,39 +84,3 @@ int count_octal_length(unsigned int n)
 		n /= 8;
 	return(len);
 }
-
-/**
- * prnt_hex_low - print number in lowercase hexadecimal
- * @n: number to print
- */
-void prnt_hex_low(unsigned int n, int *len)
-{
-	int result;
-
-	if (n / 16)
-		prnt_hex_low(n / 16, len);
-	if (n % 16 < 10)
-		result = _putchar('0' + n % 16);
-	else
-		result = _putchar('a' + ((n % 16) - 10));
-
-	*len += result;
-}
-
-/**
- * print_hex_up - print number in uppercase hexadecimal
- * @n: number to print
- */
-void prnt_hex_up(unsigned int n, int *len)
-{
-	int result;
-
-	if (n / 16)
-		prnt_hex_up(n / 16, len);
-	if (n % 16 < 10)
-		result = _putchar('0' + n % 16);
-	else
-		result = _putchar('A' + ((n % 16) - 10));
-	*len += result;
-}
-

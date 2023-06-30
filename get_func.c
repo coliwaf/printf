@@ -22,6 +22,7 @@ int (*get_func(const char *definer))(va_list)
 		{"x", print_lower_x},
 		{"X", print_upper_X},
 		{"S", print_String},
+		{"p", print_address},
 	};
 
 	for (i = 0; symbols[i].specifier; i++)

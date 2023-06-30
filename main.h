@@ -34,6 +34,7 @@ int print_octal(va_list args);
 int print_lower_x(va_list args);
 int print_upper_X(va_list args);
 int print_String(va_list args);
+int print_address(va_list args);
 
 /** helper_functions **/
 int print_number(unsigned int n);
@@ -45,6 +46,7 @@ int count_octal_length(unsigned int n);
 void prnt_hex_low(unsigned int n, int *len);
 void prnt_hex_up(unsigned int n, int *len);
 void puts_str(char *str);
+void prnt_hex_addr(unsigned long int ptr, int *len);
 
 /****** END prototypes *****/
 #endif
