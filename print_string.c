@@ -1,22 +1,55 @@
 #include "main.h"
 
 /**
- * print_string -  prints string input
- * @args: the string to print
- * Return: length of returned string
+ * print_String - prints non-printable chars in ASCII
+ * code values
+ * @args: va_list containing element to print
+ * Return: length of the string
  */
-int print_string(va_list args)
+int print_String(va_list args)
 {
 	int len;
-	char *str = va_arg(args, char*);
+	int i, j;
+	char *str = va_arg(args, char *);
+	char chr = 'A' - ':';
+	char hex[3];
 
+	len = 0;
 	if (str == NULL)
 		str = "(null)";
-
-	for (len = 0; *str != '\0'; len++)
+	for (i = 0; str[i]; i++)
 	{
-		_putchar(*str);
-		str++;
+		if (str[i] < 32 || str[i] > 126)
+		{
+			puts_str("\\x");
+			len += 2;
+			hex[0] = str[i] / 16;
+			hex[1] = str[i] % 16;
+			for (j = 0; j < 2; j++)
+			{
+				if (hex[j] >= 10)
+					_putchar('0' + chr + hex[j]);
+				else
+					_putchar('0' + hex[j]);
+			}
+			len += j;
+		}
+		else
+		{
+			_putchar(str[i]);
+			len++;
+		}
 	}
 	return (len);
+}
+/**
+ * puts_str - prints a string line to stdout
+ * @str: string param
+ */
+
+void puts_str(char *str)
+{
+	unsigned int i ;
+	for (i = '0'; str[i] != '\0'; i++)
+		_putchar(str[i]);
 }
