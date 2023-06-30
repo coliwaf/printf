@@ -17,6 +17,11 @@ int (*get_func(const char *definer))(va_list)
 		{"i", print_decimal},
 		{"b", print_binary},
 		{"S", print_String},
+		{"u", print_unsigned},
+		{"o", print_octal},
+		{"x", print_lower_x},
+		{"X", print_upper_X},
+		{"S", print_String},
 	};
 
 	for (i = 0; symbols[i].specifier; i++)

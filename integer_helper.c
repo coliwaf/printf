@@ -52,3 +52,71 @@ int prnt_binary(unsigned int n)
 
 	return (result);
 }
+
+/**
+ * prnt_octal - print number in octal
+ * @n: number to print
+ * Return: 1 if successful
+ */
+int prnt_octal(unsigned int n)
+{
+	int result;
+
+	if (n / 8)
+		prnt_octal(n / 8);
+
+	result = _putchar(n % 8 + '0');
+	if (result == -1)
+		return (result);
+	return (result);
+}
+
+/**
+ * count_octal_length - count length of octal
+ * @n: num to count
+ * Return: the length
+ */
+int count_octal_length(unsigned int n)
+{
+	unsigned int len = 0;
+
+	for (; n > 0; len++)
+		n /= 8;
+	return(len);
+}
+
+/**
+ * prnt_hex_low - print number in lowercase hexadecimal
+ * @n: number to print
+ */
+void prnt_hex_low(unsigned int n, int *len)
+{
+	int result;
+
+	if (n / 16)
+		prnt_hex_low(n / 16, len);
+	if (n % 16 < 10)
+		result = _putchar('0' + n % 16);
+	else
+		result = _putchar('a' + ((n % 16) - 10));
+
+	*len += result;
+}
+
+/**
+ * print_hex_up - print number in uppercase hexadecimal
+ * @n: number to print
+ */
+void prnt_hex_up(unsigned int n, int *len)
+{
+	int result;
+
+	if (n / 16)
+		prnt_hex_up(n / 16, len);
+	if (n % 16 < 10)
+		result = _putchar('0' + n % 16);
+	else
+		result = _putchar('A' + ((n % 16) - 10));
+	*len += result;
+}
+
