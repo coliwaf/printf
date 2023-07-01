@@ -2,8 +2,8 @@
 
 /**
  * print_decimal - prints decimal numbers
- * @args : number parameter to print
- * Return : length of output
+ * @args: number parameter to print
+ * Return: length of output
  */
 
 int print_decimal(va_list args)
@@ -18,7 +18,7 @@ int print_decimal(va_list args)
 		_putchar('0');
 		return (1);
 	}
-	else if (dec < 0 )
+	else if (dec < 0)
 	{
 		_putchar('-');
 		len += 1;
@@ -30,8 +30,8 @@ int print_decimal(va_list args)
 	res = print_number(i);
 
 	if (res == 1)
-		len += count_length(i);	
+		len += count_length(i);
 	else
 		len = -1;
 	return (len);
-}	
+}

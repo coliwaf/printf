@@ -2,7 +2,8 @@
 
 /**
  * print_string -  prints string input
- * @str: the string to print
+ * @args: the string to print
+ * Return: length of returned string
  */
 int print_string(va_list args)
 {

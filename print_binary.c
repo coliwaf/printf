@@ -30,6 +30,7 @@ int print_binary(va_list args)
 /**
  * get_binary_len - prints binary from decimal
  * @dec: number param to convert
+ * Return: length of converted binary
  */
 int get_binary_len(unsigned int dec)
 {
@@ -39,6 +40,6 @@ int get_binary_len(unsigned int dec)
 
 	for (; dec > 0; len++)
 		dec /= 2;
-	
+
 	return (len);
 }

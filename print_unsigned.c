@@ -13,7 +13,7 @@ int print_unsigned(va_list args)
 
 	int res;
 
-	if (dec < 1 )
+	if (dec < 1)
 	{
 		_putchar('0');
 		return (1);
@@ -25,8 +25,8 @@ int print_unsigned(va_list args)
 
 	if (res == 1)
 		len += count_length(i);
-	else 
+	else
 		len = -1;
-	return (len);
 
+	return (len);
 }

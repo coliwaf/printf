@@ -49,7 +49,8 @@ int print_String(va_list args)
 
 void puts_str(char *str)
 {
-	unsigned int i ;
+	unsigned int i;
+
 	for (i = '0'; str[i] != '\0'; i++)
 		_putchar(str[i]);
 }

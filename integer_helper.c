@@ -31,7 +31,7 @@ int count_length(unsigned int n)
 
 	for (; n > 0; len++)
 		n /= 10;
-	return(len);
+	return (len);
 }
 
 /**
@@ -82,5 +82,5 @@ int count_octal_length(unsigned int n)
 
 	for (; n > 0; len++)
 		n /= 8;
-	return(len);
+	return (len);
 }

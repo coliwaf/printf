@@ -8,6 +8,7 @@
 void prnt_hex_low(unsigned int n, int *len)
 {
 	int result;
+
 	if (n / 16)
 		prnt_hex_low(n / 16, len);
 	if (n % 16 < 10)
