@@ -18,7 +18,7 @@ int print_reverse(va_list args)
 
 	while (j >= 0)
 	{
-		_putchar(str[j]);
+		_putchar(s[j]);
 		j--;
 	}
 	return (len);
